@@ -1,0 +1,7 @@
+ardesa_support:
+    resource: "@ArdesaSupportBundle/Resources/config/routing.yml"
+    prefix:   /support
+
+ardesa_it:
+    resource: "@ArdesaITBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,94 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Dico
+ *
+ * @ORM\Table(name="dico")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\DicoRepository")
+ */
+class Dico
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="libelle", type="string", length=255)
+     */
+    private $libelle;
+
+    /**
+    * @ORM\ManyToOne(targetEntity="DicoType", inversedBy="dicos")
+    */
+   private $dicotype;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set libelle
+     *
+     * @param string $libelle
+     *
+     * @return Dico
+     */
+    public function setLibelle($libelle)
+    {
+        $this->libelle = $libelle;
+
+        return $this;
+    }
+
+    /**
+     * Get libelle
+     *
+     * @return string
+     */
+    public function getLibelle()
+    {
+        return $this->libelle;
+    }
+
+    /**
+     * Set dicotype
+     *
+     * @param \AppBundle\Entity\DicoType $dicotype
+     *
+     * @return Dico
+     */
+    public function setDicotype(\AppBundle\Entity\DicoType $dicotype = null)
+    {
+        $this->dicotype = $dicotype;
+
+        return $this;
+    }
+
+    /**
+     * Get dicotype
+     *
+     * @return \AppBundle\Entity\DicoType
+     */
+    public function getDicotype()
+    {
+        return $this->dicotype;
+    }
+}

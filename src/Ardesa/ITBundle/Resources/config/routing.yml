@@ -1,0 +1,7 @@
+ardesa_it_homepage:
+    path:     /
+    defaults: { _controller: ArdesaITBundle:Default:index }
+
+ardesa_it_taches:
+    path:     /taches
+    defaults: { _controller: ArdesaITBundle:Default:taches }

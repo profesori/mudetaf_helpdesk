@@ -1,0 +1,3 @@
+ardesa_support_homepage:
+    path:     /
+    defaults: { _controller: ArdesaSupportBundle:Default:index }
