@@ -10,6 +10,7 @@ class DefaultController extends Controller
     {
         return $this->render('IT/index.html.twig');
     }
+    
     public function tachesAction()
     {
         return $this->render('IT/taches.html.twig');
